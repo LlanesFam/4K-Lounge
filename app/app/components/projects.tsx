@@ -1,4 +1,4 @@
-import { ArrowUpRight, Construction } from "lucide-react";
+import { ArrowUpRight, Construction, Download } from "lucide-react";
 import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
 import { Card, CardContent } from "@/app/components/ui/card";
@@ -14,6 +14,7 @@ const projects = [
     status: "In Progress",
     stack: ["Electron", "React", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/LlanesFam/4K-OmniShop",
+    download: "https://github.com/LlanesFam/4K-OmniShop/releases/latest",
   },
 ];
 
@@ -74,7 +75,7 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="mt-6">
+                <div className="mt-6 flex flex-wrap gap-2">
                   <Button
                     variant="outline"
                     size="sm"
@@ -85,6 +86,13 @@ const Projects = () => {
                       View on GitHub <ArrowUpRight className="ml-1 size-3.5" />
                     </Link>
                   </Button>
+                  {project.download && (
+                    <Button size="sm" className="rounded-full" asChild>
+                      <Link href={project.download} target="_blank">
+                        <Download className="mr-1.5 size-3.5" /> Download App
+                      </Link>
+                    </Button>
+                  )}
                 </div>
               </div>
             </CardContent>
