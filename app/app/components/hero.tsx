@@ -1,4 +1,4 @@
-import { ArrowUpRight, CirclePlay } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
@@ -45,7 +45,7 @@ export default function Hero() {
             asChild
           >
             <Link href="https://github.com/LlanesFam" target="_blank">
-              <CirclePlay className="h-5! w-5!" /> View on GitHub
+              <Github className="h-5! w-5!" /> View on GitHub
             </Link>
           </Button>
         </div>
